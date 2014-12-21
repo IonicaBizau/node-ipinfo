@@ -1,33 +1,45 @@
-# ipinfo
+ipinfo
+======
 An http://ipinfo.io NodeJS wrapper.
 
-## Installation
-Run the following commands to download and install the application:
-
+# Installation
 ```sh
-$ git clone git@github.com:IonicaBizau/node-ipinfo.git ipinfo
-$ cd ipinfo
-$ npm install
+$ npm install ipinfo
 ```
 
-## Documentation
+# Example
+```js
+// Dependencies
+var IpInfo = require("ipinfo");
+
+// Current ip information
+IpInfo(function (err, cLoc) {
+    console.log(err || cLoc);
+
+    // Get information about a known ip
+    IpInfo("8.8.8.8", function (err, cLoc) {
+        console.log(err || cLoc);
+
+        // Get organization
+        IpInfo("8.8.8.8/org", function (err, cLoc) {
+            console.log(err || cLoc);
+        });
+    });
+});
+```
+
+# Documentation
 ## `IpInfo(type, callback)`
 Makes requests to the ipinfo.io resources.
 
-### Params 
-- **String** `type`: An optional string parameter that can be: 
+### Params
+- **String** `type`: An optional string parameter that can be:
  - An ip (e.g. `"8.8.8.8"`)
  - An ip and the a field (e.g. `"8.8.8.8/org"`)
 
 - **Function** `callback`: The callback function.
 
-### Return
-- **** 
-
-
-
-## How to contribute
-
+# How to contribute
 1. File an issue in the repository, using the bug tracker, describing the
    contribution you'd like to make. This will help us to get you started on the
    right foot.
@@ -37,5 +49,5 @@ Makes requests to the ipinfo.io resources.
 4. Open a pull request, and reference the initial issue in the pull request
    message.
 
-## License
+# License
 See the [LICENSE](./LICENSE) file.
