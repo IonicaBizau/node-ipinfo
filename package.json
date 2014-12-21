@@ -1,0 +1,24 @@
+{
+  "name": "ipinfo",
+  "version": "1.0.0",
+  "description": "An ipinfo NodeJS wrapper.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:IonicaBizau/node-ipinfo.git"
+  },
+  "keywords": [
+    "ipinfo",
+    "wrapper",
+    "nodejs"
+  ],
+  "author": "Ionică Bizău <bizauionica@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/IonicaBizau/node-ipinfo/issues"
+  },
+  "homepage": "https://github.com/IonicaBizau/node-ipinfo"
+}
