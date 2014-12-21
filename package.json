@@ -1,8 +1,8 @@
 {
   "name": "ipinfo",
   "version": "1.0.0",
-  "description": "An ipinfo NodeJS wrapper.",
-  "main": "index.js",
+  "description": "An http://ipinfo.io NodeJS wrapper.",
+  "main": "lib/index.js",
   "scripts": {
     "test": "node test"
   },
