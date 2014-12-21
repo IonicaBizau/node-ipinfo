@@ -20,5 +20,12 @@
   "bugs": {
     "url": "https://github.com/IonicaBizau/node-ipinfo/issues"
   },
-  "homepage": "https://github.com/IonicaBizau/node-ipinfo"
+  "homepage": "https://github.com/IonicaBizau/node-ipinfo",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "jsonrequest": "^1.0.0"
+  },
+  "devDependencies": {}
 }
