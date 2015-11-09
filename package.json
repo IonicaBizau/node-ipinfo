@@ -1,6 +1,6 @@
 {
   "name": "ipinfo",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "An http://ipinfo.io NodeJS wrapper.",
   "main": "lib/index.js",
   "scripts": {
@@ -15,8 +15,8 @@
     "wrapper",
     "nodejs"
   ],
-  "author": "Ionică Bizău <bizauionica@gmail.com>",
-  "license": "MIT",
+  "author": "Ionică Bizău <bizauionica@gmail.com> (http://ionicabizau.net)",
+  "license": "KINDLY",
   "bugs": {
     "url": "https://github.com/IonicaBizau/node-ipinfo/issues"
   },
