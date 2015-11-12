@@ -5,7 +5,7 @@ An http://ipinfo.io NodeJS wrapper.
 ## Installation
 
 ```sh
-$ npm i -g ipinfo
+$ npm i ipinfo
 ```
 
 ## Example
