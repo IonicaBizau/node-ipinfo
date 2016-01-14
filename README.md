@@ -1,6 +1,6 @@
-# ipinfo [![Support this project][donate-now]][paypal-donations]
+# ipinfo [![PayPal](https://img.shields.io/badge/%24-paypal-f39c12.svg)][paypal-donations] [![Version](https://img.shields.io/npm/v/ipinfo.svg)](https://www.npmjs.com/package/ipinfo) [![Downloads](https://img.shields.io/npm/dt/ipinfo.svg)](https://www.npmjs.com/package/ipinfo) [![Get help on Codementor](https://cdn.codementor.io/badges/get_help_github.svg)](https://www.codementor.io/johnnyb?utm_source=github&utm_medium=button&utm_term=johnnyb&utm_campaign=github)
 
-An http://ipinfo.io NodeJS wrapper.
+> An http://ipinfo.io NodeJS wrapper.
 
 ## Installation
 
