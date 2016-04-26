@@ -1,14 +1,18 @@
+
 # ipinfo [![PayPal](https://img.shields.io/badge/%24-paypal-f39c12.svg)][paypal-donations] [![Version](https://img.shields.io/npm/v/ipinfo.svg)](https://www.npmjs.com/package/ipinfo) [![Downloads](https://img.shields.io/npm/dt/ipinfo.svg)](https://www.npmjs.com/package/ipinfo) [![Get help on Codementor](https://cdn.codementor.io/badges/get_help_github.svg)](https://www.codementor.io/johnnyb?utm_source=github&utm_medium=button&utm_term=johnnyb&utm_campaign=github)
 
 > An http://ipinfo.io NodeJS wrapper.
 
-## Installation
+## :cloud: Installation
 
 ```sh
 $ npm i --save ipinfo
 ```
 
-## Example
+
+## :clipboard: Example
+
+
 
 ```js
 // Dependencies
@@ -30,7 +34,8 @@ IpInfo(function (err, cLoc) {
 });
 ```
 
-## Documentation
+## :memo: Documentation
+
 
 ### `IpInfo(type, callback)`
 Makes requests to the ipinfo.io resources.
@@ -44,19 +49,21 @@ Makes requests to the ipinfo.io resources.
 #### Return
 - ****
 
-## How to contribute
+
+
+## :yum: How to contribute
 Have an idea? Found a bug? See [how to contribute][contributing].
 
-## Where is this library used?
+## :dizzy: Where is this library used?
 If you are using this library in one of your projects, add it in this list. :sparkles:
 
- - [`cli-sunset`](https://github.com/IonicaBizau/cli-sunset)
 
- - [`ipinfo-cli`](https://github.com/beatfreaker/ipinfo-cli) by Chintan Radia
+ - [`cli-sunset`](https://github.com/IonicaBizau/cli-sunset)—A fancy command line tool for knowing the sunset time.
+ - [`ipinfo-cli`](https://github.com/beatfreaker/ipinfo-cli) (by Chintan Radia)—Get current ip information
+ - [`sphere-ipinfo-mashup`](https://github.com/mmoelli/sphere-ipinfo-mashup) (by Martin Möllmann)—Create carts in SPHERE.IO with information based on your IP address.
+ - [`sunset-year`](https://github.com/IonicaBizau/sunset-year#readme)—Sunset times during the year, every week.
 
- - [`sphere-ipinfo-mashup`](https://github.com/mmoelli/sphere-ipinfo-mashup) by Martin Möllmann
-
-## License
+## :scroll: License
 
 [MIT][license] © [Ionică Bizău][website]
 
