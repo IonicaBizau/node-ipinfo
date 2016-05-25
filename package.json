@@ -1,6 +1,6 @@
 {
   "name": "ipinfo",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "An http://ipinfo.io NodeJS wrapper.",
   "main": "lib/index.js",
   "scripts": {
@@ -36,6 +36,7 @@
     "src/",
     "resources/",
     "menu/",
+    "scripts/",
     "cli.js",
     "index.js"
   ]
