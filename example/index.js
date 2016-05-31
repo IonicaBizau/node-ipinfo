@@ -1,16 +1,15 @@
-// Dependencies
-var IpInfo = require("../lib");
+const ipInfo = require("../lib");
 
 // Current ip information
-IpInfo(function (err, cLoc) {
+ipInfo((err, cLoc) => {
     console.log(err || cLoc);
 
     // Get information about a known ip
-    IpInfo("8.8.8.8", function (err, cLoc) {
+    ipInfo("8.8.8.8", (err, cLoc) => {
         console.log(err || cLoc);
 
         // Get organization
-        IpInfo("8.8.8.8/org", function (err, cLoc) {
+        ipInfo("8.8.8.8/org", (err, cLoc) => {
             console.log(err || cLoc);
         });
     });
