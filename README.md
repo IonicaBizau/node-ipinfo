@@ -23,11 +23,25 @@ yarn add ipinfo
 ## :clipboard: Example
 
 
-
+### Basic usage
 ```js
 const ipInfo = require("ipinfo");
 
-// Current ip information
+ipInfo(IP_ADDRESS, AUTH_TOKEN, CALLBACK(err, cLoc) => {
+    console.log(err || cLoc);
+    // { ip: '94. ... .77',
+    //   hostname: '... .com',
+    //   city: '...',
+    //   region: 'England',
+    //   country: 'GB',
+    //   loc: '5...,3...',
+    //   org: '... UK Limited',
+    //   postal: '...' }
+});
+```
+
+### Get current host machine IP address information
+```js
 ipInfo((err, cLoc) => {
     console.log(err || cLoc);
     // { ip: '94. ... .77',
@@ -38,25 +52,30 @@ ipInfo((err, cLoc) => {
     //   loc: '5...,3...',
     //   org: '... UK Limited',
     //   postal: '...' }
+});
+```
 
-    // Get information about a known ip
-    ipInfo("8.8.8.8", (err, cLoc) => {
-        console.log(err || cLoc);
-        // { ip: '8.8.8.8',
-        //   hostname: 'google-public-dns-a.google.com',
-        //   city: 'Mountain View',
-        //   region: 'California',
-        //   country: 'US',
-        //   loc: '37.3845,-122.0881',
-        //   org: 'AS15169 Google Inc.',
-        //   postal: '94040' }
+### Get information about a known IP
+```js
+ipInfo("8.8.8.8", (err, cLoc) => {
+    console.log(err || cLoc);
+    // { ip: '8.8.8.8',
+    //   hostname: 'google-public-dns-a.google.com',
+    //   city: 'Mountain View',
+    //   region: 'California',
+    //   country: 'US',
+    //   loc: '37.3845,-122.0881',
+    //   org: 'AS15169 Google Inc.',
+    //   postal: '94040' }
 
-        // Get organization
-        ipInfo("8.8.8.8/org", (err, cLoc) => {
-            console.log(err || cLoc);
-            // AS15169 Google Inc.
-        });
-    });
+});
+```
+
+### Get IP info for specific field
+```js
+ipInfo("8.8.8.8/org", (err, cLoc) => {
+    console.log(err || cLoc);
+    // AS15169 Google Inc.
 });
 ```
 
@@ -82,8 +101,8 @@ Makes requests to the ipinfo.io resources.
 #### Params
 
 - **String** `type`: An optional string parameter that can be:
- - An ip (e.g. `"8.8.8.8"`)
- - An ip and the a field (e.g. `"8.8.8.8/org"`)
+  - An ip (e.g. `"8.8.8.8"`)
+  - An ip and the a field (e.g. `"8.8.8.8/org"`)
 - **String** `token`: The token used if you have to make an authorized request.
 - **Function** `callback`: The callback function.
 
