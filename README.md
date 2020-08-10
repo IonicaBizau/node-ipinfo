@@ -74,11 +74,11 @@ yarn add ipinfo
 
 
 ```js
-const ipInfo = require("ipinfo");
+const ipInfo = require("ipinfo")
 
 // Current ip information
 ipInfo((err, cLoc) => {
-    console.log(err || cLoc);
+    console.log(err || cLoc)
     // { ip: "94. ... .77",
     //   hostname: "... .com",
     //   city: "...",
@@ -87,11 +87,11 @@ ipInfo((err, cLoc) => {
     //   loc: "5...,3...",
     //   org: "... UK Limited",
     //   postal: "..." }
-});
+})
 
 // Get information about a known ip
 ipInfo("8.8.8.8", (err, cLoc) => {
-    console.log(err || cLoc);
+    console.log(err || cLoc)
     // { ip: "8.8.8.8",
     //   hostname: "google-public-dns-a.google.com",
     //   city: "Mountain View",
@@ -100,13 +100,18 @@ ipInfo("8.8.8.8", (err, cLoc) => {
     //   loc: "37.3845,-122.0881",
     //   org: "AS15169 Google Inc.",
     //   postal: "94040" }
-});
+})
 
 // Get organization
 ipInfo("8.8.8.8/org", (err, cLoc) => {
-    console.log(err || cLoc);
+    console.log(err || cLoc)
     // AS15169 Google Inc.
-});
+})
+
+// Use promises
+ipInfo("8.8.8.8").then(cLoc => {
+    console.log(cLoc)
+}).catch(console.error)
 ```
 
 
