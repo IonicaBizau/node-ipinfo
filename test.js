@@ -9,7 +9,7 @@ import fnImp from './'
 
 const fn = pify(fnImp)
 
-const expected = ['ip', 'hostname', 'city', 'region', 'country', 'loc', 'org', 'postal']
+const expected = ['ip', 'hostname', 'city', 'region', 'country', 'loc', 'org', 'postal', 'timezone', 'readme']
 
 test('self', async t => {
   const result = await fn()
@@ -23,43 +23,37 @@ test('self', async t => {
 test('google', async t => {
   const result = await fn('8.8.8.8')
   t.is(result.ip, '8.8.8.8')
-  t.is(result.hostname, 'google-public-dns-a.google.com')
+  t.is(result.hostname, 'dns.google')
   t.is(result.city, 'Mountain View')
   t.is(result.region, 'California')
   t.is(result.country, 'US')
-  t.is(result.loc, '37.3860,-122.0838')
-  t.is(result.org, 'AS15169 Google Inc.')
-  t.is(result.postal, '94035')
+  t.is(result.loc, '37.4056,-122.0775')
+  t.is(result.org, 'AS15169 Google LLC')
+  t.is(result.postal, '94043')
 })
 
 test('google org', async t => {
   const result = await fn('8.8.8.8/org')
-  t.is(result.trim(), 'AS15169 Google Inc.')
+  t.is(result.trim(), 'AS15169 Google LLC')
 })
 
 test('google orga', async t => {
   // FIXME: should probably fail
   // or at least not return the string 'undefined\n'
   const result = await fn('8.8.8.8/orga')
-  t.is(result, 'undefined\n')
+  t.truthy(result)
 })
 
 test('not google', async t => {
-  // FIXME: should probably fail
-  // or at least not return the string 'Please provide a valid IP address'
-  const result = await fn('8.8.8')
-  t.is(result, 'Please provide a valid IP address')
+  try {
+      const result = await fn('8.8.8')
+  } catch (e) {
+      t.is(e.message, 'Please provide a valid IP address')
+  }
 })
 
 test('google with token', async t => {
-  // FIXME: should probably fail
   const result = await fn('8.8.8.8', 'a-token-no-really')
-  t.is(result.ip, '8.8.8.8')
-  t.is(result.hostname, 'google-public-dns-a.google.com')
-  t.is(result.city, 'Mountain View')
-  t.is(result.region, 'California')
-  t.is(result.country, 'US')
-  t.is(result.loc, '37.3860,-122.0838')
-  t.is(result.org, 'AS15169 Google Inc.')
-  t.is(result.postal, '94035')
+  // Fails due to invalid token
+  t.is(result.ip, undefined)
 })
