@@ -3,4 +3,7 @@
 *~
 *.log
 node_modules
-.nyc_output
+*.env
+.DS_Store
+package-lock.json
+.bloggify/*
