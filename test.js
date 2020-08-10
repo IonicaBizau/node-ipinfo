@@ -1,7 +1,6 @@
 'use strict'
 
 // npm
-import pify from 'pify'
 import test from 'ava'
 
 // self
