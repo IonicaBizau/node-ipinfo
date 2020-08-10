@@ -5,9 +5,7 @@ import pify from 'pify'
 import test from 'ava'
 
 // self
-import fnImp from './'
-
-const fn = pify(fnImp)
+import fn from './'
 
 const expected = ['ip', 'hostname', 'city', 'region', 'country', 'loc', 'org', 'postal', 'timezone', 'readme']
 
