@@ -208,7 +208,6 @@ If you are using this library in one of your projects, add it in this list. :spa
  - `hapi-geo-locate`
  - `auto-geo-sunset`
  - `sphere-ipinfo-mashup`
- - `sunset-year`
  - `family_one`
  - `@elasticlive/sdk`
  - `alphaselfbot`
@@ -216,6 +215,7 @@ If you are using this library in one of your projects, add it in this list. :spa
  - `cli-sunset`
  - `ionicabizau.net`
  - `machine-ip`
+ - `sunset-year`
 
 
 
